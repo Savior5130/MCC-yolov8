@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YOLOv8 Object Detection</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>YOLOv8 Object Detection</h1>
+    <div class="content-container">
+      <p>This is a mockup app made by Team 5 as a project to fulfill Mobile Cloud Computing task. This app simulates object detection with YOLOv8 developed by Ultralytics. <br>
+      Our team consists of Maryanto, Philips, and Vincentius Yanrie</p>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+      <input type='file' name="file" accept='image/png, image/jpeg'/>
+      <button type='submit'>Submit</button>
+    </form>
+    {% if detection_results %}
+    <img src="data:image/png;base64,{{detection_results}}"/>
+    {% endif %}
+  </div>
+</body>
+</html>
